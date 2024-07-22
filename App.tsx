@@ -5,9 +5,9 @@ import {
   RobotoMono_700Bold,
 } from "@expo-google-fonts/roboto-mono";
 import * as SplashScreen from "expo-splash-screen";
-import { Button } from "./src/components/Button";
 import { ThemeProvider } from "styled-components";
 import theme from "./src/components/theme/theme";
+import { Form } from "./src/screens";
 
 export default function App() {
   SplashScreen.preventAutoHideAsync();
@@ -25,7 +25,7 @@ export default function App() {
   SplashScreen.hideAsync();
   return (
     <ThemeProvider theme={theme}>
-      <Button title="+" />
+      <Form />
     </ThemeProvider>
   );
 }
