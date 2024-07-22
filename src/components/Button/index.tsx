@@ -6,7 +6,7 @@ interface IButton extends TouchableOpacityProps {
 }
 export const Button = ({title, ...props}: IButton) => {
     return(
-        <TouchableOpacity>
+        <TouchableOpacity {...props}>
             <Text>{title}</Text>
         </TouchableOpacity>
     )

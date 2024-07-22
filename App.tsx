@@ -25,7 +25,7 @@ export default function App() {
   SplashScreen.hideAsync();
   return (
     <ThemeProvider theme={theme}>
-      <Button title="Enviar" />
+      <Button title="+" />
     </ThemeProvider>
   );
 }
