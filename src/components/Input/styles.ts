@@ -7,4 +7,5 @@ export const InputContainer = styled.TextInput`
   width: ${RFValue(250)}px;
   border-radius: 6px;
   border-bottom-width: 1px;
+  border-color: ${({theme}) => theme.colors.primary};
 `;

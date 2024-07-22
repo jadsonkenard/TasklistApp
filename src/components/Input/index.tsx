@@ -1,8 +1,10 @@
-import { InputContainer } from "./styles"
+import { InputContainer } from "./styles";
+import { TextInputProps } from "react-native";
 
-export const Input = () => {
+
+export const Input = ({...props}: TextInputProps) => {
     return(
-        <InputContainer>
+        <InputContainer {...props}>
         </InputContainer>
     )
 }

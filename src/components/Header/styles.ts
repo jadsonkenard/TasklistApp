@@ -4,7 +4,7 @@ import styled from "styled-components/native";
 export const HeaderContainer = styled.View`
   background-color: ${({ theme }) => theme.colors.primary};
   width: 100%;
-  height: ${RFPercentage(10)}px;
+  height: ${RFPercentage(20)}px;
   align-items: center;
   justify-content: center;
 `;

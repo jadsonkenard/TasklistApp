@@ -11,9 +11,12 @@ export const FormContent = styled.View`
   justify-content: space-between;
   padding: ${RFValue(16)}px ${RFValue(16)}px;
 `;
-export const TasksContent = styled.View`
+export const TaskButton = styled.TouchableOpacity`
   background-color: ${({theme}) => theme.colors.light};
+  width: ${RFValue(260)}px;
+  height: ${RFValue(40)}px;
+  margin: ${RFValue(5)}px;
 `
-export const Tasks = styled.Text`
-    
+export const Task = styled.Text`
+
 `
