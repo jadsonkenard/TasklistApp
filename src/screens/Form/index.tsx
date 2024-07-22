@@ -1,6 +1,14 @@
 import { useState } from "react";
 import { Button, Header, Input } from "../../components";
-import { FormContainer, FormContent, TaskButton, Task } from "./styles";
+import {
+  FormContainer,
+  FormContent,
+  TaskButton,
+  Task,
+  TitleTasks,
+  TitleContent,
+} from "./styles";
+import { ScrollView } from "react-native";
 
 interface ITask {
   id: string;
@@ -26,11 +34,18 @@ export const Form = () => {
         <Input onChangeText={setNewTask} />
         <Button title="+" onPress={addTask} />
       </FormContent>
+      <TitleContent>
+        <TitleTasks>Minhas tarefas</TitleTasks>
+      </TitleContent>
+      <ScrollView showsVerticalScrollIndicator={false}>
       {task.map((item) => (
-        <TaskButton>
+        
+        <TaskButton key={item.id}>
           <Task>{item.title}</Task>
         </TaskButton>
+        
       ))}
+      </ScrollView>
     </FormContainer>
   );
 };
