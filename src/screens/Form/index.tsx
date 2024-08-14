@@ -20,11 +20,16 @@ export const Form = () => {
   const [task, setTask] = useState<ITask[]>([]);
 
   const addTask = () => {
+    if(newTask == ""){
+      console.log("Tarefa vazia")
+      return
+    }
     const data = {
       id: String(new Date().getTime()),
-      title: newTask ? newTask : "Tarefa vazia",
+      title: newTask,
     };
     setTask([data, ...task]);
+    console.log(data.id)
     setNewTask("")
   };
 
