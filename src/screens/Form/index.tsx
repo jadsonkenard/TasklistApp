@@ -25,13 +25,15 @@ export const Form = () => {
       title: newTask ? newTask : "Tarefa vazia",
     };
     setTask([data, ...task]);
+    setNewTask("")
   };
+
 
   return (
     <FormContainer>
       <Header />
       <FormContent>
-        <Input onChangeText={setNewTask} />
+        <Input placeholder="Nova tarefa" onChangeText={setNewTask} value={newTask}/>
         <Button title="+" onPress={addTask} />
       </FormContent>
       <TitleContent>

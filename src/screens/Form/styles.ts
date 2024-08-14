@@ -28,6 +28,6 @@ export const TaskButton = styled.TouchableOpacity`
   padding-left: ${RFValue(10)}px;
 `;
 export const Task = styled.Text`
-font-family: ${({ theme }) => theme.fonts.regular};
-  font-size: 16px;
+  font-family: ${({ theme }) => theme.fonts.regular};
+  font-size: ${RFValue(14)}px;
 `;
