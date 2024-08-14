@@ -8,7 +8,7 @@ import {
   TitleTasks,
   TitleContent,
 } from "./styles";
-import { ScrollView } from "react-native";
+import { Alert, ScrollView } from "react-native";
 
 interface ITask {
   id: string;
@@ -21,7 +21,7 @@ export const Form = () => {
 
   const addTask = () => {
     if(newTask == ""){
-      console.log("Tarefa vazia")
+      Alert.alert("Atenção", "Insira uma tarefa válida")
       return
     }
     const data = {
@@ -30,6 +30,7 @@ export const Form = () => {
     };
     setTask([data, ...task]);
     console.log(data.id)
+    console.log(data.title)
     setNewTask("")
   };
 
